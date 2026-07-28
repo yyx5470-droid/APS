@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module fulladder32(
   input  logic [31:0] a_i,
   input  logic [31:0] b_i,
