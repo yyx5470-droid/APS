@@ -25,7 +25,7 @@ module processor_system(
   logic [31:0] core_rd;
   logic        core_stall;
   
-  processor_core core_inst (
+  processor_core core (
     .clk_i       (clk_i),
     .rst_i       (rst_i),
     .stall_i     (core_stall),
@@ -40,13 +40,13 @@ module processor_system(
     .mem_wd_o    (core_wd)
   );
 
-  instr_mem imem_inst (
+  instr_mem imem (
     .read_addr_i(instr_addr),
     
     .read_data_o(instr)
   );
   
-  lsu lsu_inst (
+  lsu lsu (
     .clk_i        (clk_i),
     .rst_i        (rst_i),
     .core_req_i   (core_req),
@@ -66,7 +66,7 @@ module processor_system(
     .mem_ready_i  (mem_ready)
     );
   
-  data_mem datm_inat (
+  data_mem datm (
     .clk_i           (clk_i),
     .mem_req_i       (mem_req),
     .write_enable_i  (mem_we),
