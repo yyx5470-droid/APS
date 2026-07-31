@@ -25,9 +25,6 @@ module processor_system(
   logic [31:0] core_rd;
   logic        core_stall;
   
-  // -----------------------------------------------------------------------
-  // Íîâûå ïðîâîäà äëÿ êîíòðîëëåðà ïðåðûâàíèé (ïîêà íè ê ÷åìó íå ïîäêëþ÷åíû)
-  // -----------------------------------------------------------------------
   logic        irq_req;
   logic        irq_ret;
 
@@ -37,7 +34,7 @@ module processor_system(
     .stall_i     (core_stall),
     .instr_i     (instr),
     .mem_rd_i    (core_rd),
-    .irq_req_i   (irq_req),     // Ïîäêëþ÷åíèå íîâîãî ïîðòà
+    .irq_req_i   (irq_req),
 
     .instr_addr_o(instr_addr),
     .mem_addr_o  (core_addr),
@@ -45,7 +42,7 @@ module processor_system(
     .mem_req_o   (core_req),
     .mem_we_o    (core_we),
     .mem_wd_o    (core_wd),
-    .irq_ret_o   (irq_ret)      // Ïîäêëþ÷åíèå íîâîãî ïîðòà
+    .irq_ret_o   (irq_ret)
   );
 
   instr_mem imem (
