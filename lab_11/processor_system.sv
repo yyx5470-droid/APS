@@ -26,7 +26,7 @@ module processor_system(
   logic        core_stall;
   
   // -----------------------------------------------------------------------
-  // Новые провода для контроллера прерываний (пока ни к чему не подключены)
+  // ГЌГ®ГўГ»ГҐ ГЇГ°Г®ГўГ®Г¤Г  Г¤Г«Гї ГЄГ®Г­ГІГ°Г®Г«Г«ГҐГ°Г  ГЇГ°ГҐГ°Г»ГўГ Г­ГЁГ© (ГЇГ®ГЄГ  Г­ГЁ ГЄ Г·ГҐГ¬Гі Г­ГҐ ГЇГ®Г¤ГЄГ«ГѕГ·ГҐГ­Г»)
   // -----------------------------------------------------------------------
   logic        irq_req;
   logic        irq_ret;
@@ -37,7 +37,7 @@ module processor_system(
     .stall_i     (core_stall),
     .instr_i     (instr),
     .mem_rd_i    (core_rd),
-    .irq_req_i   (irq_req),     // Подключение нового порта
+    .irq_req_i   (irq_req),     // ГЏГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГҐ Г­Г®ГўГ®ГЈГ® ГЇГ®Г°ГІГ 
 
     .instr_addr_o(instr_addr),
     .mem_addr_o  (core_addr),
@@ -45,7 +45,7 @@ module processor_system(
     .mem_req_o   (core_req),
     .mem_we_o    (core_we),
     .mem_wd_o    (core_wd),
-    .irq_ret_o   (irq_ret)      // Подключение нового порта
+    .irq_ret_o   (irq_ret)      // ГЏГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГҐ Г­Г®ГўГ®ГЈГ® ГЇГ®Г°ГІГ 
   );
 
   instr_mem imem (
